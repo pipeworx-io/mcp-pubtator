@@ -1,0 +1,32 @@
+{
+  "name": "@pipeworx/mcp-pubtator",
+  "version": "0.1.0",
+  "description": "PubTator 3 MCP — biomedical entity search, literature search with entity",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "bin": {
+    "mcp-pubtator": "bin/cli.js"
+  },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "pubtator"],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pipeworx-io/mcp-pubtator.git"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.30.0",
+    "tsx": "^4.19.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@cloudflare/workers-types": "^4.20260405.1"
+  },
+  "pipeworx": {
+    "sourceHash": "v1-43faa8e3a5a35e5c3d28676a601f5b12641bb92cc3be34d3ba9fcad30c48a434",
+    "sourceCommit": "be47827ad0f444e813e7224db0489c4ea890a30e"
+  }
+}
