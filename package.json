@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-pubtator",
-  "version": "0.1.0",
-  "description": "PubTator 3 MCP — biomedical entity search, literature search with entity",
+  "version": "0.2.0",
+  "description": "PubTator 3 MCP — biomedical entity search, literature search with entity highlighting, and entity-entity relations with supporting passages, from the PubTator 3 API run by NCBI / NLM (National Library of Medicine).",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-pubtator": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "pubtator"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-pubtator.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/pubtator",
   "pipeworx": {
-    "sourceHash": "v1-43faa8e3a5a35e5c3d28676a601f5b12641bb92cc3be34d3ba9fcad30c48a434",
-    "sourceCommit": "be47827ad0f444e813e7224db0489c4ea890a30e"
+    "mode": "gateway",
+    "slug": "pubtator",
+    "gatewaySlug": "pubtator",
+    "sourceHash": "v1-6db8ab66079421cdf41f450d4c6ace113154a9442a3d1bb993bbc728a37db4d8",
+    "sourceCommit": "6bae4cfa7b6a73bbe014dc8820a19c80c842b21e"
   }
 }
